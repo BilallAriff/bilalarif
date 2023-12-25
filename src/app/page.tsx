@@ -3,19 +3,40 @@ import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import { aboutMe } from "./store/about_me";
 import DownloadResume from "@/components/DownloadResume/DownloadResume";
+import SocialContacts from "@/components/SocialContacts/SocialContacts";
+import BusinessLogos from "@/components/BusinessLogos/BusinessLogos";
 
 export default function Home() {
   return (
     <Box className={"full-screen flex-all-center flex-column"}>
       <Box sx={{ paddingX: 15 }}>
         <Box>
-          <Typography textAlign={"center"} className="hero-heading">
+          <Typography
+            textAlign={"center"}
+            fontSize={65}
+            className="hero-heading"
+          >
             {aboutMe.title}
           </Typography>
-          <Typography textAlign={"center"} className="hero-sub-heading">
+          <Box className="flex-all-center">
+            <SocialContacts variant="color" hoverEffect />
+          </Box>
+          <Typography
+            textAlign={"center"}
+            fontSize={25}
+            className="hero-sub-heading"
+          >
             {aboutMe.subTitle}
           </Typography>
-          <Typography mt={5} textAlign={"center"} className="paragraph">
+          <Box>
+            <BusinessLogos />
+          </Box>
+          <Typography
+            mt={5}
+            fontSize={18}
+            textAlign={"center"}
+            className="paragraph"
+          >
             {aboutMe.description}
           </Typography>
         </Box>

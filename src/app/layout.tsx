@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import ThemeRegistery from "../../theme/ThemeRegistery.js";
 
-const inter = Inter({ subsets: ["latin"] });
+const NunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Bilal Arif",
@@ -16,7 +17,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        />
+      </head>
+      <ThemeRegistery options={{ key: "mui-theme" }}>
+        <body className={NunitoSans.className}>{children}</body>
+      </ThemeRegistery>
     </html>
   );
 }
