@@ -1,7 +1,8 @@
 "use client";
 
-import { Button, CircularProgress } from "@mui/material";
+import { Box, Button, CircularProgress } from "@mui/material";
 import React, { useState } from "react";
+import PulsatingButton from "../PulsatingButton/PulsatingButton";
 
 const DownloadResume = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -29,13 +30,23 @@ const DownloadResume = () => {
       document.body.removeChild(downloadLink);
     } catch (err) {
       console.log(err);
-    } finally {
-      setIsLoading(false);
     }
   };
   return (
     <>
-      <Button
+      <PulsatingButton
+        onClick={handleDownload}
+        text={
+          isLoading ? (
+            <Box className={"flex-all-center"} sx={{ height: "100%", mt: 0.5 }}>
+              <CircularProgress sx={{ color: "#FFFFFF" }} size={18} />
+            </Box>
+          ) : (
+            "Download Resume"
+          )
+        }
+      />
+      {/* <Button
         variant="contained"
         size="small"
         disabled={isLoading}
@@ -43,7 +54,7 @@ const DownloadResume = () => {
         onClick={handleDownload}
       >
         Resume
-      </Button>
+      </Button> */}
     </>
   );
 };

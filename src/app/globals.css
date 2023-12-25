@@ -23,7 +23,7 @@ body {
 }
 
 .hero-heading {
-  font-size: 10px;
+  font-size: 55px;
   font-weight: 600;
 }
 
@@ -37,6 +37,59 @@ body {
 
 .freelance_business_logos:hover {
   height: "100px !important";
+}
+
+/* ------ Pulsating Button ------ */
+
+.pulse-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  border: 1px solid red;
+}
+
+.pulse {
+  position: relative;
+  /* padding: 10px 20px; */
+  min-width: 180px;
+  width: fit-content;
+  height: 25px;
+  background-color: #1245595a;
+
+  /* background-color: #124559; */
+  /* background-color: #0a2e36; */
+  /* background-color: #01161e; */
+  /* background-color: #030027; */
+  /* background-color: #151e3f; */
+  border-radius: 50px;
+}
+
+.pulse .pulse-layers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #124559;
+  border-radius: inherit;
+  animation: pulseAnimate 4s ease-out infinite;
+  animation-delay: calc(1s * var(--i));
+}
+
+.pulse p {
+  position: relative;
+  color: white;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@keyframes pulseAnimate {
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
 }
 
 /* @tailwind base;

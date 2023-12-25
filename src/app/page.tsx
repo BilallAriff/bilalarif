@@ -5,38 +5,26 @@ import { aboutMe } from "./store/about_me";
 import DownloadResume from "@/components/DownloadResume/DownloadResume";
 import SocialContacts from "@/components/SocialContacts/SocialContacts";
 import BusinessLogos from "@/components/BusinessLogos/BusinessLogos";
+import PulsatingButton from "@/components/PulsatingButton/PulsatingButton";
 
 export default function Home() {
   return (
     <Box className={"full-screen flex-all-center flex-column"}>
       <Box sx={{ paddingX: 15 }}>
         <Box>
-          <Typography
-            textAlign={"center"}
-            fontSize={65}
-            className="hero-heading"
-          >
+          <Typography textAlign={"center"} className="hero-heading">
             {aboutMe.title}
           </Typography>
-          <Box className="flex-all-center">
+          <Box my={2} className="flex-all-center">
             <SocialContacts variant="color" hoverEffect />
           </Box>
-          <Typography
-            textAlign={"center"}
-            fontSize={25}
-            className="hero-sub-heading"
-          >
+          <Typography textAlign={"center"} className="hero-sub-heading">
             {aboutMe.subTitle}
           </Typography>
-          <Box>
+          <Box my={2}>
             <BusinessLogos />
           </Box>
-          <Typography
-            mt={5}
-            fontSize={18}
-            textAlign={"center"}
-            className="paragraph"
-          >
+          <Typography mt={5} textAlign={"center"} className="paragraph">
             {aboutMe.description}
           </Typography>
         </Box>

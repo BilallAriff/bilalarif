@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import ThemeRegistery from "../../theme/ThemeRegistery.js";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 
 const NunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
@@ -24,7 +25,11 @@ export default function RootLayout({
         />
       </head>
       <ThemeRegistery options={{ key: "mui-theme" }}>
-        <body className={NunitoSans.className}>{children}</body>
+        <body className={NunitoSans.className}>
+          <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+            {children}
+          </AppRouterCacheProvider>
+        </body>
       </ThemeRegistery>
     </html>
   );
