@@ -6,6 +6,7 @@ import DownloadResume from "@/components/DownloadResume/DownloadResume";
 import SocialContacts from "@/components/SocialContacts/SocialContacts";
 import BusinessLogos from "@/components/BusinessLogos/BusinessLogos";
 import PulsatingButton from "@/components/PulsatingButton/PulsatingButton";
+import SkillBadges from "@/components/SkillBadges/SkillBadges";
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
           <Typography textAlign={"center"} className="hero-sub-heading">
             {aboutMe.subTitle}
           </Typography>
+          <Box my={2}>
+            <SkillBadges />
+          </Box>
           <Box my={2}>
             <BusinessLogos />
           </Box>

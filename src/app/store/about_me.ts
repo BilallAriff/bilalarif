@@ -2,5 +2,5 @@ export const aboutMe = {
   title: "Bilal Arif",
   subTitle: "Software Engineer who loves to build UX/UI",
   description:
-    "Developing next generations Applications from past 3+ for startup with fastest growig trajectory to large scale enterprises download my resume or explore my page to learn more about me and my activities",
+    "I've spent 3+ years building apps for startups and large enterprises, focusing mainly on the user-friendly front-end. I also handle the nitty-gritty of the back-end with ease. Constantly picking up new tech skills, I'm here to turn your ideas into functional solutions.",
 };
