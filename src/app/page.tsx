@@ -7,10 +7,12 @@ import SocialContacts from "@/components/SocialContacts/SocialContacts";
 import BusinessLogos from "@/components/BusinessLogos/BusinessLogos";
 import PulsatingButton from "@/components/PulsatingButton/PulsatingButton";
 import SkillBadges from "@/components/SkillBadges/SkillBadges";
+import LoadingScreen from "@/components/LoadingScreen/LoadingScreen";
 
 export default function Home() {
   return (
     <Box className={"full-screen flex-all-center flex-column"}>
+      <LoadingScreen />
       <Box sx={{ paddingX: 15 }}>
         <Box>
           <Typography textAlign={"center"} className="hero-heading">
