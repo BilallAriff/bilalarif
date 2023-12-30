@@ -46,7 +46,7 @@ const Navigation = () => {
         <span style={{ color: "lightgray" }}>|</span>
         <Link
           style={{ textDecoration: "none", color: "#0000009a" }}
-          href={"/adventurr.tech"}
+          href={"/adventurr"}
         >
           Adventurr.tech
         </Link>

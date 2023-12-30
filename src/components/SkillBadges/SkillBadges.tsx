@@ -19,7 +19,7 @@ const SkillBadges = () => {
           <>
             <Tooltip title={badge?.name}>
               <Box sx={{ marginRight: 2 }} key={index}>
-                <img width={"100%"} src={badge?.icon} />
+                <img width={"100%"} alt="" src={badge?.icon} />
               </Box>
             </Tooltip>
           </>
