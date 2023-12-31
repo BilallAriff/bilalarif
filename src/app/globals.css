@@ -11,15 +11,37 @@ body {
   height: 100vh;
 }
 
+/* ======================= UTILITY CLASSES ====================== */
+
 .full-screen {
   width: 100%;
   height: 100%;
+}
+
+.width-100 {
+  width: 100%;
 }
 
 .flex-all-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-center-justify-between {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.flex-content-stretch {
+  justify-content: stretch;
 }
 
 .hero-heading {
