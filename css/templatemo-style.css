@@ -552,14 +552,20 @@ a#logo {
 }
 .facts-list .item {
   overflow: hidden;
-  text-align: center;
   border-radius: 10px;
   width: 100%;
   display: inline-block;
   text-transform: capitalize;
   font-size: 14px;
-  padding: 30px 0px;
+  padding: 15px 0px;
   background: rgba(0, 0, 0, 0.25);
+}
+.facts-list .item .counter-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .counter-box span {
   font-size: 26px;
@@ -571,11 +577,12 @@ a#logo {
   opacity: 0.75;
 }
 .facts-list .item:hover {
-  background: #fff;
-  color: #1e1e1e;
+  background: rgba(0, 0, 0, 0.5);
+  /* color: #1e1e1e; */
 }
 .facts-list .owl-dots {
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .count-number,
 .counted {
@@ -598,10 +605,17 @@ a#logo {
   font-weight: 300;
 }
 .services-list .item {
-  background-color: rgba(250, 250, 250, 0.25);
+  /* background-color: rgba(250, 250, 250, 0.25); */
   border-radius: 10px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.services-list .service-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .service-icon {
   display: block;
@@ -610,13 +624,26 @@ a#logo {
 }
 .service-box {
   font-size: 15px;
-  padding: 40px 20px;
+  /* padding: 40px 20px; */
   height: 100%;
 }
 .services-list .item:hover {
-  background-color: #fff;
-  color: #1e1e1e;
+  /* background-color: #fff; */
+  /* color: #1e1e1e; */
 }
+
+.service-box .service-box-img-shopify {
+  width: 250px !important;
+}
+
+.service-box .service-box-img-front-end-development {
+  width: 170px !important;
+}
+
+.service-box .service-box-img-full-stack {
+  width: 240px !important;
+}
+
 .service-box h3 {
   font-size: 22px;
   font-weight: 700;
@@ -960,4 +987,55 @@ textarea.form-control {
 
 .filter-invert {
   filter: invert(1);
+}
+
+/* ================ About Me Section ============== */
+
+.heading-1 {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.about-me-description-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10rem;
+  margin-top: 2rem;
+}
+
+.about-me-profile-photo {
+  min-width: fit-content;
+  margin-right: 1.5em;
+}
+
+.about-me-description-section p {
+  font-weight: 200;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  text-align: left;
+  position: relative;
+}
+
+.about-me-description-section p::before {
+  content: url("../images/starting-q-mark.png"); /* Replace 'example.svg' with the path to your SVG file */
+  position: absolute;
+  top: -10px;
+  left: -30px;
+  /* width: 100%;
+  height: 100%; */
+  z-index: -1;
+}
+
+.about-me-description-section p::after {
+  content: url("../images/closing-q-mark.png"); /* Replace 'example.svg' with the path to your SVG file */
+  position: absolute;
+  bottom: -30px;
+  /* width: 100%;
+  height: 100%; */
+  z-index: -1;
+}
+
+.skill-badge-icon {
+  width: 50px !important;
 }
